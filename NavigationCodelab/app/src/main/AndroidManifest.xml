@@ -32,6 +32,15 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+            <!-- rally://single_account DEEP LINK -->
+            <!-- FOR TESTING: adb shell am start -d "rally://single_account/Checking" -a android.intent.action.VIEW-->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="rally" android:host="single_account" />
+            </intent-filter>
         </activity>
     </application>
 </manifest>
